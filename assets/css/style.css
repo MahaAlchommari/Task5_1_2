@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cerousal {
+    border: 2px solid #ccc;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    display: flex;
+    width: 400%;
+    border: 1px solid red;
+    transition: all 0.3s;
+}
+
+.slider div {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .one, .slider .three {
+    color: white;
+    background-color: #FFB6C1;
+}
+
+.slider .two, .slider .four {
+    color: white;
+    background-color: #9370DB;
+}
+
+.slider .one p, .slider .two, .slider .four p, .slider .three {
+    font-size: 100px;
+}
+
+.controls .arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.controls .arrow .icon {
+    font-size: 50px;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.controls ul {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+}
+
+.controls ul li {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #333;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.controls ul li.selected {
+    background: transparent;
+}
